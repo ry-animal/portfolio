@@ -17,9 +17,9 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props
-let pageTitle = 'Articles';
-let pageDescription = `page ${page.currentPage} of all articles`;
-let seoTitle = 'Articles | Creek';
+let pageTitle = 'Projects';
+let pageDescription = `page ${page.currentPage} of all projects`;
+let seoTitle = 'Projects | Creek';
 let seoDescription = '';
 ---
 
@@ -29,10 +29,10 @@ let seoDescription = '';
   <BaseHead title={seoTitle} description={seoDescription} />
 </head>
 
-<body class="bg-white text-black font-body leading-normal personality-casual">
+<body class="bg-black text-white font-body leading-normal personality-casual">
   <Nav />
 
-  <main class="py-12 lg:py-20">
+  <main class="py-12 lg:py-20 ">
     <article class="max-w-6xl mx-auto px-3">
       <HomeHeader title={pageTitle} description={pageDescription} />
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8" data-test="articles-section">

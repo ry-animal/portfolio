@@ -6,12 +6,12 @@ import Card from '../components/Card.astro';
 import Footer from '../components/Footer/Footer.astro'
 
 interface MarkdownFrontmatter {
-  date: number;
+  pubDate: number;
 }
 
-const title = 'Creek';
-const description = 'A Theme for Astro';
-const seoDescription = 'Creek is a theme for Astro static site generator';
+const title = 'Ryan Van Valkenburg';
+const description = 'my projects';
+const seoDescription = 'Ryan Van Valkenburg engineer frontend fullstack react golang';
 
 const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
@@ -23,7 +23,7 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valu
   <BaseHead title={title} description={seoDescription} />
 </head>
 
-<body class="bg-white text-black font-body leading-normal personality-casual">
+<body class="bg-black text-white font-body leading-normal personality-casual">
   <Nav />
 
   <main class="py-12 lg:py-20">
@@ -37,11 +37,11 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valu
     </article>
   </main>
 
-  <section class="flex space-x-8 justify-center text-xl pt-8 font-bold">
+  <!-- <section class="flex space-x-8 justify-center text-xl pt-8 font-bold">
     <a href="/posts" class="mr-8" data-test="see-all-link">
       See All<span class="squiggle">&rarr;</span>
     </a>
-  </section>
+  </section> -->
 
   <Footer />
 </body>
