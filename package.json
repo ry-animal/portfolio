@@ -6,7 +6,7 @@
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
     "build": "astro build",
-    "postbuild": "./scripts/search/prepare-index.js",
+
     "preview": "astro preview"
   },
   "devDependencies": {
