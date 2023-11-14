@@ -1,9 +1,10 @@
 ---
-title: "Microsoft - Minecraft.net"
-pubDate: "2023-11-13"
+title: "Microsoft via VC"
+title2: "Minecraft.net"
+pubDate: "2020-08-01"
 slug: "minecraft"
 description: "This is account management and e-commerce site for the game Minecraft."
-hero: "/images/minecraft.png"
+hero: "/images/minecraft.gif"
 tags: ["minecraft"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---

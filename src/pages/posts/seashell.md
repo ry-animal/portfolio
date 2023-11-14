@@ -1,9 +1,10 @@
 ---
-title: "Seashell - Yielding Vaults"
+title: "Seashell"
+title2: "Yielding Vaults"
 pubDate: "2023-03-01"
 slug: "seashell"
 description: "This is a next.js application connected to the blockchain to produce yield from vaults and autocompounding."
-hero: "/images/seashell.png"
+hero: "/images/seashell.gif"
 tags: ["seashell"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---

@@ -1,9 +1,10 @@
 ---
-title: "Snowcrash - NFT Platform"
+title: "Snowcrash"
+title2: "NFT Platform"
 pubDate: "2022-12-08"
 slug: "nft-marketplace"
 description: "This is a next.js application connected to the blockchain to mint NFTs on a marketplace."
-hero: "/images/snowcrash.png"
+hero: "/images/snowcrash.gif"
 tags: ["snowcrash"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---

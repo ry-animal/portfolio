@@ -1,9 +1,10 @@
 ---
-title: "Seamless - Lending Protocol"
+title: "Seamless"
+title2: "Lending Protocol"
 pubDate: "2023-03-01"
 slug: "seamless"
 description: "This is a next.js application connected to the blockchain to do lending and borrowing on the Base L2 Chain."
-hero: "/images/seamless.png"
+hero: "/images/seamless.gif"
 tags: ["seamless"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---

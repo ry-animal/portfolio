@@ -3,21 +3,43 @@ import EmailSignup from './Subscribe/EmailSignup.astro'
 
 export interface Props {
   title: string;
+  title2?: string;
   date: string;
   hero: string;
   youtube: string;
 }
 
-const { title, date, hero, youtube } = Astro.props;
+const { title, title2, date, hero, youtube } = Astro.props;
 ---
 
 <article class="max-w-5xl mx-auto px-3">
   <header class="mx-auto max-w-3xl text-center content">
-    <h1>{title}</h1>
+    <h1 class="-mb-8">{title}</h1>
+    <h2 class="mb-4">{title2}</h2>
   </header>
 
   <!-- Image -->
-  {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="lazy" src={hero} alt={title} />}
+  {hero && <div class="image-container">
+    <img class="rounded-xl mx-auto min-w-[80%] object-cover" loading="lazy" src={hero} alt={title} />
+  </div>}
+
+  <style>
+  .image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  </style>
 
   <!-- YouTube Video -->
   {youtube && <div class="embed-responsive aspect-ratio-16/9 mt-6 lg:mt-12">

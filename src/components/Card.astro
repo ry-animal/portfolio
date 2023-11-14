@@ -9,14 +9,36 @@ const { post } = Astro.props;
 ---
 
 <a href={post.url}
+  id="card"
   class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden text-black border-8"
   data-test="article-card">
 
-  <img src={post.frontmatter.hero} alt={post.frontmatter.title} width="360" height="192" class="border-b">
+  <div id="gifContainer" class="gif-container">
+    <img 
+    id="staticImage" 
+    src={post.frontmatter.hero.replace('.gif', '.png')} 
+    alt={post.frontmatter.title} 
+    width="360" 
+    height="192" 
+    class="border-b"
+  />
+    <img 
+      id="gifImage" 
+      src={post.frontmatter.hero} 
+      alt={post.frontmatter.title} 
+      width="360" 
+      height="192" 
+      class="border-b gif"
+      loading="eager" 
+    />
+  </div>
   <div class="py-6 px-8 flex flex-col justify-between h-34">
     <h2 class="font-bold text-2xl leading-tight">
       {post.frontmatter.title}
     </h2>
+    <h3>
+    {post.frontmatter.title2}
+    </h3>
     <p class="text-xs text-gray-600 mt-4 flex items-center">
       {dayjs(post.frontmatter.pubDate).format('MM-DD-YYYY')}
     </p>
@@ -24,9 +46,39 @@ const { post } = Astro.props;
 </a>
 
 <style>
-  img {
+  .gif-container {
+    position: relative;
+    width: 360px;
+    height: 192px;
+  }
+  .gif-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    aspect-ratio: 15/7;
+    height: 100%;
     object-fit: cover;
   }
+  .gif {
+    display: none;
+  }
+  #card:hover #gifImage {
+    display: block;
+  }
 </style>
+
+<script>
+  const card = document.getElementById('card');
+  const staticImage = document.getElementById('staticImage');
+  const gifImage = document.getElementById('gifImage');
+
+  card.addEventListener('mouseover', () => {
+    staticImage.style.display = 'none';
+    gifImage.style.display = 'block';
+  });
+
+  card.addEventListener('mouseout', () => {
+    staticImage.style.display = 'block';
+    gifImage.style.display = 'none';
+  });
+</script>

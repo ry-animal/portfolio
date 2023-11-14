@@ -1,9 +1,10 @@
 ---
-title: "M&T Bank - Legal Fintech"
-pubDate: "2023-11-13"
+title: "M&T Bank"
+title2: "Legal Fintech"
+pubDate: "2021-04-21"
 slug: "nft-marketplace"
 description: "This is a React application for a legal fintech startup."
-hero: "/images/nota.png"
+hero: "/images/nota.gif"
 tags: ["nota"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---

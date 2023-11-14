@@ -1,9 +1,10 @@
 ---
-title: "Boeing - Careers@Boeing"
+title: "Boeing"
+title2: "Careers@Boeing"
 pubDate: "2015-06-15"
 slug: "boeing"
 description: "This is an HR application for hiring for Boeing."
-hero: "/images/boeing.png"
+hero: "/images/boeing.gif"
 tags: ["boeing"]
 layout: "../../layouts/BlogPostLayout.astro"
 ---
