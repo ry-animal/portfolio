@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro build",
-    "postbuild": "bunx ./scripts/search/prepare-index.js",
-    "preview": "bunx --bun astro preview"
+    "build": "astro build",
+    "postbuild": "./scripts/search/prepare-index.js",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "astro": "^3.3.2",
